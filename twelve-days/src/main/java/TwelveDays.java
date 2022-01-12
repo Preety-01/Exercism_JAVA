@@ -19,15 +19,7 @@ class TwelveDays {
         String finalString="";
         for(int i=startVerse;i<=endVerse;i++)
         {
-            String initialString="";
-            initialString+="On the " + days[i-1] + " day of Christmas my true love gave to me:";
-            for(int j=i;j>0;j--)
-            {
-                if(j==1 && i>1)
-                    initialString+=" and"+message[j-1];
-                else
-                    initialString+=message[j-1];
-            }                 
+            String initialString = verse(i);  
             if(i!=endVerse)
                 finalString+=initialString + "\n";
             else
