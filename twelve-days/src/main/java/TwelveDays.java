@@ -37,24 +37,7 @@ class TwelveDays {
     }
     
     String sing() {
-        String finalString="";
-        for(int i=1;i<=12;i++)
-        {
-            String initialString="";
-            initialString+="On the " + days[i-1] + " day of Christmas my true love gave to me:";
-            for(int j=i;j>0;j--)
-            {
-                if(j==1 && i>1)
-                    initialString+=" and"+message[j-1];
-                else
-                    initialString+=message[j-1];
-            }       
-            if(i!=12)
-                finalString+=initialString + "\n";
-            else
-                finalString+=initialString;
-        }
-        return finalString;
+        return verses(1, 12);
     }
 }
 
