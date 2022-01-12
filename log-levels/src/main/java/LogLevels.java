@@ -19,18 +19,13 @@ public class LogLevels {
     }
 
     public static String reformat(String logLine) {
-        String words[]=logLine.split("\\W+");
-        String answer="";
-        for(int i=2;i<words.length;i++)
-        {
-            answer+=words[i] + " ";
-        }
+        String answer = message(logLine);
         if(logLine.contains("[ERROR]"))
-             answer+="(error)";
+             answer+=" (error)";
         else if(logLine.contains("[WARNING]"))
-            answer+="(warning)";
+            answer+=" (warning)";
         else
-            answer+="(info)";
+            answer+=" (info)";
         
         return answer;
     }
